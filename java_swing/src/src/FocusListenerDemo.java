@@ -33,7 +33,6 @@ public class FocusListenerDemo extends JFrame {
         f = new Font("Serif", Font.BOLD + Font.ITALIC, 20);
         jb.setFont(f);
         container.add(jb);
-
         ja = new JTextArea();
         ja.setBounds(270,150,350,350);
         container.add(ja);
