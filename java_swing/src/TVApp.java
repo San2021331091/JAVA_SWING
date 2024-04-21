@@ -8,6 +8,7 @@ public class TVApp extends JFrame {
 
     private JLabel channelLabel;
     private JLabel volumeLabel;
+    private JLabel liveChannel;
 
     public TVApp() {
         setTitle("TV App");
@@ -28,6 +29,7 @@ public class TVApp extends JFrame {
 
         channelLabel = new JLabel("Channel: " + currentChannel);
         volumeLabel = new JLabel("Volume: " + currentVolume);
+        liveChannel = new JLabel("Live Channel: " + currentChannel); // Placeholder for live channel
 
         // Add components to control panel
         controlPanel.add(prevChannelButton);
@@ -64,6 +66,7 @@ public class TVApp extends JFrame {
         mainPanel.add(channelLabel, BorderLayout.NORTH);
         mainPanel.add(volumeLabel, BorderLayout.SOUTH);
         mainPanel.add(controlPanel, BorderLayout.CENTER);
+        mainPanel.add(liveChannel, BorderLayout.CENTER);
 
         add(mainPanel);
         setVisible(true);
@@ -73,6 +76,7 @@ public class TVApp extends JFrame {
         if (currentChannel > 1) {
             currentChannel--;
             channelLabel.setText("Channel: " + currentChannel);
+            liveChannel.setText("Live Channel: " + currentChannel); // Update live channel display
         }
     }
 
@@ -81,6 +85,7 @@ public class TVApp extends JFrame {
         if (currentChannel < 100) {
             currentChannel++;
             channelLabel.setText("Channel: " + currentChannel);
+            liveChannel.setText("Live Channel: " + currentChannel); // Update live channel display
         }
     }
 
